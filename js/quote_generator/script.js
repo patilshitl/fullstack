@@ -16,31 +16,50 @@ let quotes = [
   { text: "Great things never come from comfort zones.", author: "George Addair" }
 ];
 
+localStorage.setItem("motivationalQuotes", JSON.stringify(quotes));
 
-    // Save to localStorage if not already saved
-    if (!localStorage.getItem("motivationalQuotes")) {
-      localStorage.setItem("motivationalQuotes", JSON.stringify(quotes));
-    }
 
 let displayQuotes = document.getElementById("displayQuotes");
 let generatBtn = document.getElementById("generatBtn");
 let quoteList = document.getElementById("quotes");
-let author = document.getElementById("author");
+let authorList = document.getElementById("author");
 
-
-// function changeQuotes(){
-//     let storedQuotes = JSON.parse(localStorage.getItem("motivationalQuotes"));
-//     let randomIndex = Math.floor(Math.random() * storedQuotes.length);
-//     let randomQuote = storedQuotes[randomIndex];
-//     displayQuotes.textContent = randomQuote;
-// }
 
 function changeQuotes() {
   let storedQuotes = JSON.parse(localStorage.getItem("motivationalQuotes"));
   let randomIndex = Math.floor(Math.random() * storedQuotes.length);
   let randomQuote = storedQuotes[randomIndex];
 
-  console.log(randomQuote.text);
+  //console.log(storedQuotes);
   quoteList.textContent = `"${randomQuote.text}"`;
-  author.textContent = `– ${randomQuote.author}`;
+  authorList.textContent = `– ${randomQuote.author}`;
+}
+
+
+let newQuoteInput = document.getElementById("newQuote");
+let authorNameInput = document.getElementById("name");
+let newAddQuotes = JSON.parse(localStorage.getItem("motivationalQuotes")) || [];
+
+function addQuotes() {
+  let newQuote = newQuoteInput.value.trim();
+  let authorName = authorNameInput.value.trim();
+
+  if (newQuote && authorName) {
+    // Add the new quote and author to the array
+    let quote = {
+      text: newQuote,
+      author: authorName
+    };
+
+    newAddQuotes.push(quote);
+    localStorage.setItem("motivationalQuotes", JSON.stringify(newAddQuotes));
+
+    alert("New quote added!");
+console.log(storedQuotes);
+    // Clear the input fields after adding the quote
+    newQuoteInput.value = "";
+    authorNameInput.value = "";
+  } else {
+    alert("Both quote and author must be provided.");
+  }
 }
