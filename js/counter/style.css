@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.action{
+    display: flex;
+    flex-direction: column;
+}
+
+#increment{
+    background-color: rgb(72 149 72);
+    padding: 2%;
+    color: white;
+    font-size: xx-large;
+}
+
+#decrement{
+    background-color: grey;
+}
+
+.counter{
+    height: 200px;
+    background-color: wheat;
+}
