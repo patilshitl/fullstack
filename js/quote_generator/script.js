@@ -40,26 +40,30 @@ let newQuoteInput = document.getElementById("newQuote");
 let authorNameInput = document.getElementById("name");
 let newAddQuotes = JSON.parse(localStorage.getItem("motivationalQuotes")) || [];
 
+
 function addQuotes() {
   let newQuote = newQuoteInput.value.trim();
   let authorName = authorNameInput.value.trim();
 
   if (newQuote && authorName) {
-    // Add the new quote and author to the array
+    // Always get the latest quotes from localStorage
+    let updatedQuotes = JSON.parse(localStorage.getItem("motivationalQuotes")) || [];
+
     let quote = {
       text: newQuote,
       author: authorName
     };
 
-    newAddQuotes.push(quote);
-    localStorage.setItem("motivationalQuotes", JSON.stringify(newAddQuotes));
+    updatedQuotes.push(quote);
+    localStorage.setItem("motivationalQuotes", JSON.stringify(updatedQuotes));
 
     alert("New quote added!");
-console.log(storedQuotes);
-    // Clear the input fields after adding the quote
+    console.log(updatedQuotes);
+
     newQuoteInput.value = "";
     authorNameInput.value = "";
   } else {
     alert("Both quote and author must be provided.");
   }
 }
+

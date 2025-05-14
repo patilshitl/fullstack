@@ -1,33 +1,61 @@
 *{
-    padding: 0;
-    margin: 0;
+    padding: 0%;
+    margin: 0%;
 }
 
-body{
+.container{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    font-family: sans-serif;
 }
 
-.action{
+.number{
     display: flex;
-    flex-direction: column;
+    width: 400px;
 }
 
-#increment{
-    background-color: rgb(72 149 72);
-    padding: 2%;
+.number > input{
+    width: 100%;
+    padding: 4%;
+    border: none;
+}
+
+.number > button{
+    width: 13%;
+    padding: 0% 3%;
+    font-size: 20px;
+    color: grey;
+    border: none;
+    cursor: pointer;
+}
+
+.increment, .decrement{
+    text-align: center;
     color: white;
-    font-size: xx-large;
+    font-size: 40px;
+    font-weight: 900;
+    margin: 3% 0%;
+    border-radius: 10px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
 }
 
-#decrement{
-    background-color: grey;
+.increment{
+    background-color: #4caf50;
+}
+
+.decrement{
+    background-color: #747474;
 }
 
 .counter{
-    height: 200px;
     background-color: wheat;
+    padding: 1%;
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
