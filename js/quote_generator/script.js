@@ -46,7 +46,7 @@ function addQuotes() {
   let authorName = authorNameInput.value.trim();
 
   if (newQuote && authorName) {
-    // Always get the latest quotes from localStorage
+
     let updatedQuotes = JSON.parse(localStorage.getItem("motivationalQuotes")) || [];
 
     let quote = {

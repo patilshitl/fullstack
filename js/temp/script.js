@@ -32,5 +32,5 @@ function convertTemp() {
 
     }
 
-    result.innerHTML = convertedValue + " " + convertInto;
+    result.innerHTML = parseInt(convertedValue) + " " + convertInto;
 }

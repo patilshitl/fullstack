@@ -6,7 +6,7 @@ let decrement = document.getElementById("decrement");
 
 
 function resetNum(){
-    inputNum.value="";
+    inputNum.value=0;
 }
 
 function incrementNum(){
