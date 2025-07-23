@@ -1,0 +1,149 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+/* custom css */
+*{
+  padding: 0%;
+  margin: 0%;
+}
+
+.main{
+
+}
+
+.budgetBox{
+    height: 150px;
+    width: 353px;
+    border-radius: 10px;
+    box-shadow: 9px 9px 27px #efefef;
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.budgetBox:first-child{
+  background-color: rgb(227 228 255 / 53%);
+}
+
+.budgetDiv{
+  display: flex;
+}
+
+.budgetBox p{
+      color: #bdbdbd;
+}
+
+.filters{
+  display: flex;
+      justify-content: space-around;
+}
+
+
+.search{
+    border: 1px solid #bdbdbd;
+    border-radius: 25px;
+    padding: 0.2% 1%;
+    background: #bdbdbd24;
+    display: flex;
+    color: #ababab;
+    justify-content: center;
+    align-items: center;
+}
+
+.expenses{
+    border: 1px solid #bdbdbd;
+    border-radius: 25px;
+    padding: 0.2% 1%;
+    background: #5C6AFF;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.food{
+    border: 1px solid #bdbdbd;
+    border-radius: 25px;
+    padding: 0.2% 1%;
+    background: #f1f1f1;
+    display: flex;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+}
+
+.groseries{
+    border: 1px solid #bdbdbd;
+    border-radius: 25px;
+    padding: 0.2% 1%;
+    background: #f1f1f1;
+    display: flex;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+}
+
+.travel{
+    border: 1px solid #bdbdbd;
+    border-radius: 25px;
+    padding: 0.2% 1%;
+    background: #f1f1f1;
+    display: flex;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+}
+
+.health{
+    border: 1px solid #bdbdbd;
+    border-radius: 25px;
+    padding: 0.2% 1%;
+    background: #f1f1f1;
+    display: flex;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+}
