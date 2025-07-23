@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Click counter</h1>
+        <div class="counter">
+            <div class="number">
+                <input type="number" id="inputNum" style="border-radius: 10px 0px 0px 10px;" value="0" min="0">
+                <button id="reset" style="border-radius: 0px 10px 10px 0px;" onclick="resetNum()">
+                    x
+                </button>
+                <!-- <input type="text" value="x" id="reset" style="border-radius: 0px 10px 10px 0px;" onclick="resetNum()"> -->
+            </div>
+            <div class="actions">
+                <button class="increment" id="increment" onclick="incrementNum()">
+                    +
+                </button>
+                <button class="decrement" id="decrementNum" onclick="decrementNum()">
+                    -
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
