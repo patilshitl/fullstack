@@ -48,8 +48,8 @@
   margin: 0%;
 }
 
-.main{
-
+.name, header{
+  text-align: left;
 }
 
 .budgetBox{
@@ -57,7 +57,6 @@
     width: 353px;
     border-radius: 10px;
     box-shadow: 9px 9px 27px #efefef;
-    margin: 2%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,7 +68,10 @@
 }
 
 .budgetDiv{
-  display: flex;
+  display: flex
+;
+    padding: 4% 0%;
+    justify-content: space-between;
 }
 
 .budgetBox p{
@@ -104,7 +106,7 @@
     align-items: center;
 }
 
-.food{
+.food,  .groseries, .travel, .health{
     border: 1px solid #bdbdbd;
     border-radius: 25px;
     padding: 0.2% 1%;
@@ -115,35 +117,37 @@
     align-items: center;
 }
 
-.groseries{
+.addBudget, .addExpense{
     border: 1px solid #bdbdbd;
-    border-radius: 25px;
-    padding: 0.2% 1%;
-    background: #f1f1f1;
+    border-radius: 7px;
+    padding: 0.2% 2%;
+    background: #5c6aff;
     display: flex;
-    color: #000;
+    color: #fff;
     justify-content: center;
     align-items: center;
 }
 
-.travel{
-    border: 1px solid #bdbdbd;
-    border-radius: 25px;
-    padding: 0.2% 1%;
-    background: #f1f1f1;
-    display: flex;
-    color: #000;
-    justify-content: center;
-    align-items: center;
+
+
+.addButtons{
+  display: flex;
+    width: 23%;
+    justify-content: space-between;
 }
 
-.health{
-    border: 1px solid #bdbdbd;
-    border-radius: 25px;
-    padding: 0.2% 1%;
-    background: #f1f1f1;
-    display: flex;
-    color: #000;
-    justify-content: center;
-    align-items: center;
+
+.listOfExpense{
+  padding: 3%;
+    margin: 3% 0%;
+    border: 1px solid #9E9E9E;
+    border-radius: 15px;
+}
+
+.listOfExpense table{
+  width: 100%;
+}
+
+.expenseTh{
+  width: 65%;
 }

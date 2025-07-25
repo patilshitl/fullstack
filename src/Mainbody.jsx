@@ -5,7 +5,7 @@ export default function Mainbody() {
     <div>
       <main>
         <div className='name'>
-            <h2>Hello, Shital Patil</h2>
+            <h1>Hello, Shital Patil</h1>
         </div>
       </main>
     </div>

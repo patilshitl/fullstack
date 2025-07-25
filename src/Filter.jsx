@@ -1,4 +1,5 @@
 import React from 'react'
+import Add from './Add'
 
 export default function Filter() {
   return (
@@ -31,6 +32,8 @@ export default function Filter() {
             <img src='../src/assets/icons/health-icon.png' />
             <p>Health</p>
       </div>
+
+      <Add />
     </div>
   )
 }

@@ -1,6 +1,6 @@
-import Add from './Add'
 import './App.css'
 import Budget from './Budget'
+import Expenselist from './Expenselist'
 import Filter from './Filter'
 import Mainbody from './Mainbody'
 import Nav from './Nav'
@@ -19,11 +19,12 @@ function App() {
           <Budget title="Remaining Budget"/>
         </div>
 
-        <div>
+        <div className=''>
           <Filter />
-          <Add />
         </div>
         
+
+        <Expenselist />
       </div>
     </>
   )
