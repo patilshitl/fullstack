@@ -151,3 +151,12 @@
 .expenseTh{
   width: 65%;
 }
+
+#addExpenseModal {
+  padding: 3%;
+}
+
+#addBudgetModal, #addExpenseModal label{
+  text-align: left;
+    width: 100%;
+}
