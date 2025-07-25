@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 export default function Add() {
+
+  const [amount, setAmount] = useState('');
+
+  const handelSubmission = (e) =>{
+    e.preventDefault();
+
+    if(!amount) return;
+
+    const existingBudgets = JSON.parse(localStorage.getItem('budgets')) || [];
+
+    const newBudget = {
+      id: Date.now(),
+      amount: parseFloat(amount),
+    };
+
+    const updateBudget = [...existingBudgets, newBudget];
+    localStorage.setItem('budgets', JSON.stringify(updateBudget));
+
+    setAmount('');
+  }
+
   return (
     <>
       <div className='addButtons'>
@@ -23,7 +44,7 @@ export default function Add() {
 
 
       
-
+      {/* Budget modal form */}
       <div className="modal fade" id="addBudgetModal" tabIndex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
@@ -34,26 +55,30 @@ export default function Add() {
             </div>
 
             <div className='modal-body'>
-              <form action="">
+              <form onSubmit={handelSubmission}>
                 
                 <div className="mb-3">
                   <label htmlFor="amount" className="form-label">Amount*</label>
-                  <input type="number" name="amount" id="amount" className="form-control" required />
+                  <input type="number" name="amount" id="amount" value={amount} onChange= {(e) =>setAmount (e.target.value)} className="form-control" required />
                 </div>
 
-              </form>
+              
 
-            </div>
+           
 
               <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="submit" className="btn btn-primary">Submit</button>
               </div>
+
+              </form>
+               </div>
             </div>
 
           </div>
-        </div>
+      </div>
 
+      {/* Expense modal form */}
         <div className="modal fade" id="addExpenseModal" tabIndex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">

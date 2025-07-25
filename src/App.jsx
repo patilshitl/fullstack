@@ -14,7 +14,7 @@ function App() {
         <hr />
         <Mainbody />
         <div className='budgetDiv'>
-          <Budget title="Total Budget"/>
+          <Budget title="Total Budget" amount="20000"/>
           <Budget title="Total Expense"/>
           <Budget title="Remaining Budget"/>
         </div>
