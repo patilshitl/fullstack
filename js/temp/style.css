@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.tempConvertor{
+    border: 3px solid #0ab1af;
+    width: 1000px;
+    height: 500px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.tempInput, .tempResult{
+    width: 50%;
+}
+
+.tempInput{
+    color: #0ab1af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.tempResult{
+    background-color: #0ab1af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+}
+
+.degree input{
+    padding: 3% 2%;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+}
+
+.convert input{
+    padding: 3% 2%;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+}
+
+.convert select{
+    padding: 3%;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    width: 65%;
+}
+
+.degree-details{
+    display: flex;
+}
+
+.degree-details > input{
+    border-radius: 5px 0px 0px 5px;
+    width: 73%;
+}
+
+.degree-details > input:last-child{
+    border-radius: 0px 5px  5px 0px;
+    width: 10%;
+}
+
+.degree div, .convert div{
+    margin: 3% 0%;
+}
+
+button{
+    background: #0ab1af;
+    padding: 3% 7%;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}

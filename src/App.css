@@ -1,0 +1,163 @@
+#root {
+  max-width: 100vw;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+/* custom css */
+*{
+  padding: 0%;
+  margin: 0%;
+}
+
+.name, header{
+  text-align: left;
+}
+
+.budgetBox{
+    height: 150px;
+    width: 353px;
+    border-radius: 10px;
+    box-shadow: 9px 9px 27px #efefef;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.budgetBox:first-child{
+  background-color: rgb(227 228 255 / 53%);
+}
+
+.budgetDiv{
+  display: flex
+;
+    padding: 4% 0%;
+    justify-content: space-between;
+}
+
+.budgetBox p{
+      color: #bdbdbd;
+}
+
+.filters{
+  display: flex;
+      justify-content: space-around;
+}
+
+
+.search{
+    border: 1px solid #bdbdbd;
+    border-radius: 25px;
+    padding: 0.2% 1%;
+    background: #bdbdbd24;
+    display: flex;
+    color: #ababab;
+    justify-content: center;
+    align-items: center;
+}
+
+.expenses{
+    border: 1px solid #bdbdbd;
+    border-radius: 25px;
+    padding: 0.2% 1%;
+    background: #5C6AFF;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.food,  .groseries, .travel, .health{
+    border: 1px solid #bdbdbd;
+    border-radius: 25px;
+    padding: 0.2% 1%;
+    background: #f1f1f1;
+    display: flex;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+}
+
+.addBudget, .addExpense{
+    border: 1px solid #bdbdbd;
+    border-radius: 7px;
+    padding: 0.2% 2%;
+    background: #5c6aff;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.addButtons{
+  display: flex;
+    width: 23%;
+    justify-content: space-between;
+}
+
+
+.listOfExpense{
+  padding: 3%;
+    margin: 3% 0%;
+    border: 1px solid #9E9E9E;
+    border-radius: 15px;
+}
+
+.listOfExpense table{
+  width: 100%;
+}
+
+.expenseTh{
+  width: 65%;
+}
+
+#addExpenseModal {
+  padding: 3%;
+}
+
+#addBudgetModal, #addExpenseModal label{
+  text-align: left;
+    width: 100%;
+}
